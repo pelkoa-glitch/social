@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from account.models import Profile
+from .models import Profile
 
 
 class EmailAuthBackend:
@@ -9,9 +9,11 @@ class EmailAuthBackend:
             user = User.objects.get(email=username)
             if user.check_password(password):
                 return user
+        except User.DoesNotExist:
             return None
-        except (User.DoesNotExist, User.MultipleObjectrReturned):
+        except User.MultipleObjectsReturned:
             return None
+        return None
 
     def get_user(self, user_id):
         try:
