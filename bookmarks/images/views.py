@@ -68,7 +68,7 @@ def image_list(request):
     page = request.GET.get('page')
     images_only = request.GET.get('images_only')
     try:
-        images - paginator.page(page)
+        images = paginator.page(page)
     except PageNotAnInteger:
         # Если страница не является целым числом,
         # то доставить первую страницу
