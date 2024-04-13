@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'django_extensions',
+    'easy_thumbnails',
 
 ]
 
@@ -150,3 +151,5 @@ if DEBUG:
     import mimetypes
     mimetypes.add_type('application/javascript', '.js', True)
     mimetypes.add_type('text/css', '.css', True)
+
+THUMBNAIL_DEBUG = True
