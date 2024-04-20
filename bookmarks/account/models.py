@@ -15,7 +15,7 @@ class Profile(models.Model):
 
 
 class Contact(models.Model):
-    user_form = models.ForeignKey('auth.User',
+    user_from = models.ForeignKey('auth.User',
                                   related_name='rel_from_set',
                                   on_delete=models.CASCADE)
     user_to = models.ForeignKey('auth.User',
@@ -27,7 +27,7 @@ class Contact(models.Model):
         indexes = [
             models.Index(fields=['-created']),
         ]
-        ordering = ['created']
+        ordering = ['-created']
 
     def __str__(self):
         return f'{self.user_from} follows {self.user_to}'
