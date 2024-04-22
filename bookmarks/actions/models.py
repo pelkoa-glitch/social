@@ -12,5 +12,5 @@ class Action(models.Model):
         indexes = [
             models.Index(fields=['-created']),
         ]
-        ordering = ['created']
+        ordering = ['-created']
 
