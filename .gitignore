@@ -1,0 +1,13 @@
+.vscode/
+*.pyc
+.env
+core/project/settings/local.py
+static/*
+!static/.gitkeep
+*.sqlite*
+.venv/
+__pycache__/
+/media/
+cert.crt
+cert.key
+.idea
