@@ -18,7 +18,7 @@
 
    ```bash
    git clone https://github.com/pelkoa-glitch/social.git
-   cd social/bookmarks
+   cd social
 
 2. Install all required packages in `Requirements` section.
 
