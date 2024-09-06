@@ -18,7 +18,7 @@ from django.shortcuts import (
 from django.views.decorators.http import require_POST
 
 import redis
-from actions.utils import create_action
+from apps.actions.utils import create_action
 
 from .forms import ImageCreateForm
 from .models import Image

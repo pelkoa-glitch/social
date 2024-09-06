@@ -26,9 +26,9 @@ ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(',')
 # Application definition
 
 INSTALLED_APPS = [
-    'account.apps.AccountConfig',
-    'images.apps.ImagesConfig',
-    'actions.apps.ActionsConfig',
+    'apps.account.apps.AccountConfig',
+    'apps.images.apps.ImagesConfig',
+    'apps.actions.apps.ActionsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'bookmarks.urls'
+ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'bookmarks.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 
 # Database
