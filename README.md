@@ -11,6 +11,7 @@
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - [GNU Make](https://www.gnu.org/software/make/)
+- [POETRY](https://python-poetry.org/)
 
 ## How to Use
 
@@ -18,15 +19,16 @@
 
    ```bash
    git clone https://github.com/pelkoa-glitch/social.git
-   cd social
-
 2. Install all required packages in `Requirements` section.
 
 3. Rename and fill the file `.env.example` with your dependencies'
 
 4. Run command
     ```bash
-        make app
+        cd social
+        poetry install  -  install dependencies
+        poetry shell    -  activate python venv
+        make all        -  command will run all docker containers
 
 5. Go to your https://host:port and enjoy the app
 
